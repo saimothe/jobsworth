@@ -1,0 +1,58 @@
+.next_tasks_panel li {
+  margin-bottom: 5px;
+
+  i {
+    display: none;
+  }
+
+  .top-next-task {
+    background-color: #FFCE8A;
+  }
+}
+
+.next_tasks_panel li:hover i {
+  display: inline-block;
+}
+
+.next_tasks_panel #nextTasks_more {
+  margin-left: 5px;
+}
+
+.next_tasks_panel .page_header {
+  font-weight: bold;
+  text-align: left;
+}
+
+.next_tasks_panel .page_header a[rel=tooltip] {
+  margin-right: 5px;
+}
+
+.next_tasks_panel .collapsable-button {
+  float: left;
+  height: 13px;
+  width: 13px;
+  background: image-url('expand-indicator-small.png') 0px 0px no-repeat;
+  padding-right: 2px;
+  padding-left: 0px;
+  margin-top: 5px;
+  margin-left: 2px;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.next_tasks_panel.collapsed {
+  .collapsable-button {
+    background: image-url('expand-indicator-small.png') 0px -13px no-repeat;
+  }
+
+  .panel_content {
+    display: none;
+  }
+}
+
+#next-tasks-container .next_tasks_panel {
+  width: 23%;
+  margin-right: 2%;
+  float: left;
+}
+

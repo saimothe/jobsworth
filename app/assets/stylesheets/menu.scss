@@ -1,0 +1,38 @@
+#menu_logo {
+  display: inline-block;
+}
+
+#topper-worktime-area {
+  float: right;
+  display: inline-block;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.navbar-inner {
+  border-radius: 0;
+}
+
+// override navbar styles
+
+.nav li.dropdown:hover > ul.dropdown-menu {
+  display: block;
+  position: absolute;
+  left: 0;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.navbar .nav li.dropdown:hover ul.preference {
+  left: -80px;
+}
+
+.navbar .nav > li > a {
+  color: #CCCCCC;
+  font-size: 1.05em;
+}
+
+#menubar_search {
+  width: 150px;
+}

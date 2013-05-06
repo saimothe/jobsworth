@@ -1,0 +1,71 @@
+// overwrite bootstrap styles
+// put all variables which change internal bootstrap variables before the @import
+// https://github.com/thomas-mcdonald/bootstrap-sass/blob/master/vendor/assets/stylesheets/bootstrap/_variables.scss
+
+
+@import "variables";
+
+@import "bootstrap";
+@import "bootstrap-responsive";
+
+// because overriding a mixin doesn't work so we need to do it like this
+// this can be removed when the bug in the SCSS bootstrap gem is fixed
+input, button, select, textarea {
+  font-family: $baseFontFamily !important;
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+  border: 1px solid #EEEEEE;
+  @include box-shadow(0 1px 1px rgba(0, 0, 0, 0.02) inset);
+}
+
+select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"], .uneditable-input {
+  color: #444444;
+}
+
+img {
+  // override max-width: 100%;
+  max-width: none;
+}
+
+.modal {
+  width: auto;
+}
+
+.form-horizontal .control-group > label {
+  float: left;
+  width: 140px;
+  padding-top: 5px;
+  text-align: right;
+}
+
+.dropdown-menu .header {
+  margin-left: 5px;
+}
+
+// tighter borders in the top menu since there is limited room
+.navbar-inner {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.input-tiny {
+  width: 30px;
+}
+
+.label-inverse, .badge-inverse {
+  background-color: #555555;
+}
+
+// override gantt styles
+
+.fn-gantt .leftPanel .desc {
+  width: 100%;
+}
+
+.fn-gantt .leftPanel .name {
+  display: none;
+}
+.fn-gantt .leftPanel .fn-label {
+  width: 100%;
+}
